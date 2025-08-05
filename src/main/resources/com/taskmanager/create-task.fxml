@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Text?>
+<VBox xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.taskmanager.controller.CreateTaskController"
+            prefHeight="400.0" prefWidth="600.0"
+            style="-fx-padding: 20;"
+            spacing="25"
+            alignment="CENTER">
+
+    <Text text="Create new task" style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+
+    <GridPane alignment="CENTER" hgap="20" vgap="15">
+        <Text text="Enter title"                                      GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <TextField fx:id="taskTitleField" prefWidth="150"             GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+        <Text text="Pick status"                                      GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <ChoiceBox fx:id="statusChoiceBox" prefWidth="150"            GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+        <Text text="Pick category"                                      GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <ChoiceBox fx:id="categoryChoiceBox" prefWidth="150"            GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+        <Label text="Choose due date"                                 GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+        <DatePicker fx:id="dueDatePicker"  prefWidth="150"            GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+    </GridPane>
+
+    <HBox alignment="BOTTOM_CENTER" style="-fx-padding: 10;" spacing="15">
+        <Button fx:id="createButton" text="Create" onAction="#onCreateClick" prefWidth="100.0"/>
+        <Button fx:id="cancelButton" text="Cancel" onAction="#onCancelClick" prefWidth="100.0"/>
+    </HBox>
+</VBox>

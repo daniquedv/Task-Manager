@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.taskmanager.controller.TaskViewController"
+      prefHeight="400.0" prefWidth="600.0"
+      style="-fx-padding: 20;"
+      spacing="25"
+      alignment="CENTER">
+
+    <Label fx:id="titleLabel"   style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+
+    <GridPane alignment="CENTER" hgap="20" vgap="15">
+        <Label text="Due: "                                           GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <Label fx:id="dateLabel" prefWidth="150"                      GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+        <Label text="Status: "                                        GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <ChoiceBox fx:id="statusChoiceBox" prefWidth="150"            GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+    </GridPane>
+
+    <HBox alignment="BOTTOM_CENTER" style="-fx-padding: 10;" spacing="15">
+        <Button fx:id="saveButton" text="Save" onAction="#onSaveClick" prefWidth="100.0"/>
+        <Button fx:id="deleteButton" text="Delete" onAction="#onDeleteClick" prefWidth="100.0"/>
+        <Button fx:id="cancelButton" text="Cancel" onAction="#onCancelClick" prefWidth="100.0"/>
+    </HBox>
+
+</VBox>
